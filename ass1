@@ -1,0 +1,53 @@
+// Name: Andrew Taylor
+// Program: assignedseating.c 
+// Date: 8/30/2023
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define INITSIZE 10
+#define MAXLEN 50
+#define MAXROWS 100000
+
+typedef struct order
+{
+    int s_seat;
+    int e_seat;
+    char* name;
+} order;
+
+typedef struct theaterrow
+{
+    order ** list_orders;
+    int max_size;
+    int current_size;
+} theaterrow;
+
+order* make_order(int start, int end, char* this_name)
+{
+
+}
+
+theaterrow* make_empty_row();
+
+int conflict(order* order1, order* order2);
+
+int can_add_order(theaterrow* this_row, order* this_order);
+
+void add_order(theaterrow* this_row, order* this_order);
+
+char* get_owner(theaterrow** theater, int row, int seat_num);
+
+char* get_row_owner(theaterrow* this_row, int seat_num);
+
+int contains(order* myorder, int seat_no);
+
+void free_order(order* this_order);
+
+void free_row(theaterrow* this_row);
+
+int main()
+{
+
+}
